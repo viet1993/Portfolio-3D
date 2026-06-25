@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #915EFF;
+  --secondary: #00D9FF;
+  --accent: #FF6B9D;
+  --bg: #050816;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg);
+  color: #f3f3f3;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Scrollbar for panels */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 4px;
+}
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: rgba(145, 94, 255, 0.4);
+  border-radius: 2px;
+}
+
+/* Glass */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(20, 16, 48, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(145, 94, 255, 0.15);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #915EFF, #00D9FF, #FF6B9D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Primary button */
+.btn-primary {
+  background: linear-gradient(135deg, #915EFF, #7c3aed);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 28px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(145, 94, 255, 0.4);
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 25px rgba(145, 94, 255, 0.6);
+}
+
+/* Canvas cursor */
+canvas {
+  cursor: grab;
+}
+canvas:active {
+  cursor: grabbing;
+}
+
+/* Neon glow shadows */
+.shadow-neon {
+  box-shadow: 0 0 15px rgba(145, 94, 255, 0.5), 0 0 30px rgba(145, 94, 255, 0.2);
+}
+
+.shadow-cyan {
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+}
