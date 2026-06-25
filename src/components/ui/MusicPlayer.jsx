@@ -62,7 +62,7 @@ const MusicPlayer = () => {
       {/* Hidden audio element playing Pallet Town Lofi */}
       <audio
         ref={audioRef}
-        src="/pallet-town-pokemon-red-amp-blue-lofi.mp3"
+        src={import.meta.env.BASE_URL + "pallet-town-pokemon-red-amp-blue-lofi.mp3"}
         loop
         preload="auto"
       />

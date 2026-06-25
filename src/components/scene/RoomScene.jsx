@@ -175,7 +175,7 @@ function PulsingGlow({ scene, hoveredObjId }) {
 
 // The main GLB room loader
 const PokemonRoom = ({ onObjectClick, onObjectHover }) => {
-  const { scene } = useGLTF("/pokemon_3D_room.glb");
+  const { scene } = useGLTF(import.meta.env.BASE_URL + "pokemon_3D_room.glb");
   const [hoveredObj, setHoveredObj] = useState(null);
   const { gl } = useThree();
 
@@ -279,5 +279,5 @@ const RoomScene = ({ onObjectClick, onObjectHover }) => {
   );
 };
 
-useGLTF.preload("/pokemon_3D_room.glb");
+useGLTF.preload(import.meta.env.BASE_URL + "pokemon_3D_room.glb");
 export default RoomScene;
